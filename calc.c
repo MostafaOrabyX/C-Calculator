@@ -5,27 +5,32 @@ int calc(int x ,char operation , int y);
 
 int main()
 {
+    while(1)
+    {
+        int num1 ;
+        int num2 ;
+        char letter ;
+        printf("Enter the first letter of the operation (A/S/M/D):");
+        scanf(" %c" , &letter );
+        printf("First number: ");
+        scanf("%i", &num1);
+        printf("Second number: ");
+        scanf("%i", &num2);
+        // pass the values to the function
+        int answer = calc(num1 , toupper(letter) , num2);
 
-    int num1 ;
-    int num2 ;
-    char letter ;
-    printf("Write the first letter of the operation you want\nAddition | Subtraction | Multiplication | Division\n: ");
-    scanf("%c" , &letter );
-    printf("First number : ");
-    scanf("%i", &num1);
-    printf("Second number : ");
-    scanf("%i", &num2);
-    // pass the values to the function
-    int answer = calc(num1 , toupper(letter) , num2);
+        // print the answer
+        printf( "The answer is: %i\n" , answer);
 
-    // print the answer
-    printf("the answer is %i\n" , answer);
-    
-
-    return 0 ;
+        char question ;
+        printf("Do you want to calculate anything else? (y/n):");
+        scanf(" %c" , &question);
+        if (question == 'n' || question == 'N')
+        {
+            return 0 ;
+        }
+    }
 }
-
-
 
 
 
