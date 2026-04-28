@@ -2,6 +2,7 @@
 #include <ctype.h>
 
 int calc(int x ,char operation , int y);
+void cleanbuffer();
 
 int main()
 {
@@ -11,24 +12,64 @@ int main()
         int num2 ;
         char letter ;
         printf("Enter the first letter of the operation (A/S/M/D):");
-        scanf(" %c" , &letter );
+        if (scanf(" %c" , &letter ) != 1)
+        {
+            printf("invalid input\n");
+            cleanbuffer();
+            continue;
+
+        }
+        char Uletter = toupper(letter);
+        
+        // if the user typed invalid char
+        if (Uletter != 'A' && Uletter != 'S' && Uletter != 'M' && Uletter != 'D' )
+        {
+            printf("invalid input. please try again.\n");
+            cleanbuffer();
+            continue ;
+        }
         printf("First number: ");
-        scanf("%i", &num1);
+        if (scanf("%i", &num1) != 1)
+        {
+            printf("invalid input. please try again.\n");
+            cleanbuffer();
+            continue;
+        }
         printf("Second number: ");
-        scanf("%i", &num2);
-        // pass the values to the function
-        int answer = calc(num1 , toupper(letter) , num2);
+        if (scanf("%i", &num2) != 1)
+        {
+            printf("invalid input. please try again.\n");
+            cleanbuffer();
+            continue;
+        }
+
+        // in case of division by zero
+        if (Uletter == 'D' && num2 == 0)
+        {
+            printf("Math error: division by zero\n");
+            continue;
+        }
+        // pass the values to the function 
+        int answer = calc(num1 , Uletter , num2);
 
         // print the answer
         printf( "The answer is: %i\n" , answer);
 
+        // if the user want to exit 
         char question ;
         printf("Do you want to calculate anything else? (y/n):");
-        scanf(" %c" , &question);
-        if (question == 'n' || question == 'N')
+        if (scanf(" %c" , &question) != 1)
         {
-            return 0 ;
+            printf("invalid input\n");
+            cleanbuffer();
+            continue;
         }
+
+        if (toupper(question) == 'N')
+        {
+           return 0 ;
+        }
+
     }
 }
 
@@ -53,5 +94,13 @@ int calc(int x ,char operation , int y)
     {
         return x / y ;
     }
-    
+
+    // if something went wrong
+    printf("Error");
+    return 0 ;
+}
+
+void cleanbuffer()
+{
+    while (getchar() != '\n'); // clean the input buffer
 }
