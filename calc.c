@@ -99,8 +99,8 @@ int calc(int x ,char operation , int y)
     printf("Error");
     return 0 ;
 }
-
 void cleanbuffer()
+
 {
     while (getchar() != '\n'); // clean the input buffer
 }
