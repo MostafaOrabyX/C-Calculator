@@ -55,7 +55,7 @@ int main()
         // print the answer
         printf( "The answer is: %i\n" , answer);
 
-        // if the user want to exit 
+        // if the user wants to exit 
         char question ;
         printf("Do you want to calculate anything else? (y/n):");
         if (scanf(" %c" , &question) != 1)
@@ -78,18 +78,22 @@ int main()
 // calculations function
 int calc(int x ,char operation , int y)
 {
+    // Addition
     if (operation   == 'A')
     {
         return x + y ;
     }
+    // Subtraction
     else if (operation == 'S')
     {
         return x - y ;
     }
+    // Multiplication
     else if (operation == 'M')
     {
         return x * y ;
     }
+    // Division
     else if (operation == 'D')
     {
         return x / y ;
@@ -99,8 +103,8 @@ int calc(int x ,char operation , int y)
     printf("Error");
     return 0 ;
 }
-
 void cleanbuffer()
+
 {
     while (getchar() != '\n'); // clean the input buffer
 }
