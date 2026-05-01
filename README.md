@@ -28,12 +28,12 @@ The program supports addition, subtraction, multiplication, and division with in
 
 ## How to Run
 
-1. Compile the code using c compiler :
-   Example :
-   gcc calc.c -o calc
+1. Compile the code using c compiler :  
+   Example :  
+   gcc calc.c -o calc  
    
-2. Run the program
-   ./calc
+2. Run the program  
+   ./calc  
 
 ## Example
 
