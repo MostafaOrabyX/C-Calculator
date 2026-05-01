@@ -20,11 +20,11 @@ The program supports addition, subtraction, multiplication, and division with in
 
 ---
 
-## How it works 
+## How It Works
 
-1. The program gets two numbers and the first letter of the opeartion(A/S/M/D) from the user 
-2. Do the operation on the two numbers
-3. print the result
+1. The program takes two numbers and a character representing the operation (A/S/M/D) from the user
+2. It performs the selected operation on the two numbers
+3. It prints the result
 
 ## How to Run
 
