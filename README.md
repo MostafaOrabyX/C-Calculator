@@ -28,11 +28,11 @@ The program supports addition, subtraction, multiplication, and division with in
 
 ## 💡 Example
 
-* Enter the first letter of the operation (A/S/M/D): a
-* First number: 20
-* Second number: 30
-* The answer is: 50
-* Do you want to calculate anything else? (y/n): n
+*> Enter the first letter of the operation (A/S/M/D): a
+*> First number: 20
+*> Second number: 30
+*> The answer is: 50
+*> Do you want to calculate anything else? (y/n): n
 
 ---
 
