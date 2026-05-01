@@ -60,6 +60,6 @@ Do you want to calculate anything else? (y/n): n
 
 ---
 
-## 👤 Author
+## Author
 
 Mostafa Oraby
