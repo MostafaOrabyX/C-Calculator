@@ -1,13 +1,13 @@
 # C Calculator
 
-## 📌 Description
+## Description
 
 A simple CLI calculator written in C that allows users to perform basic arithmetic operations.
 The program supports addition, subtraction, multiplication, and division with input validation.
 
 ---
 
-## 🚀 Features
+## Features
 
 * Perform basic math operations:
 
@@ -20,13 +20,13 @@ The program supports addition, subtraction, multiplication, and division with in
 
 ---
 
-## 🛠️ How to Run
+## How to Run
 
 1. Compile the code
 2. Run the program
 
 
-## 💡 Example
+## Example
 
 Enter the first letter of the operation (A/S/M/D): a  
 First number: 20  
@@ -36,7 +36,7 @@ Do you want to calculate anything else? (y/n): n
 
 ---
 
-## 📚 What I Learned
+## What I Learned
 
 * Using C to perform calculations
 * Handling invalid user input
@@ -45,7 +45,7 @@ Do you want to calculate anything else? (y/n): n
 
 ---
 
-## 💻 Language Used
+## Language Used
 
 * C
 
